@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey Form</title>
+</head>
+<style>
+    /* Styling the Body element i.e. Color, Font, Alignment */
+    body {
+        background-color: wheat;
+        font-family: Verdana;
+        text-align: center;
+    }
+
+    /* Styling the Form (Color, Padding, Shadow) */
+    form {
+        background-color: #fff;
+        max-width: 500px;
+        margin: 50px auto;
+        padding: 30px 20px;
+        box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.5);
+    }
+
+    /* Styling form-control Class */
+    .form-control {
+        text-align: left;
+        margin-bottom: 25px;
+    }
+
+    /* Styling form-control Label */
+    .form-control label {
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    /* Styling form-control input, select, textarea */
+    .form-control input,
+    .form-control select,
+    .form-control textarea {
+        border: 1px solid #777;
+        border-radius: 2px;
+        font-family: inherit;
+        padding: 10px;
+        display: block;
+        width: 95%;
+    }
+
+    /* Styling form-control Radio button and Checkbox */
+    .form-control input[type="radio"],
+    .form-control input[type="checkbox"] {
+        display: inline-block;
+        width: auto;
+    }
+
+    /* Styling Button */
+    button {
+        background-color: coral;
+        border: 1px solid black;
+        border-radius: 5px;
+        font-family: inherit;
+        font-size: 21px;
+        display: block;
+        width: 50%;
+        margin-top: 50px;
+        margin-bottom: 20px;
+        margin-right: auto;
+        margin-left: auto;
+        padding: 5px;
+    }
+
+    button:hover {
+        background-color: bisque;
+    }
+    
+    .form-control select {
+        width: 100% !important;
+    }
+</style>
+
+<body>
+    <h1 id="title">Survey Form</h1>
+
+    <p id="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis esse ullam aspernatur, vero
+        ipsa optio accusantium tenetur, vel explicabo deleniti consequatur culpa sint nostrum earum hic neque sed
+        delectus dolorem.</p>
+
+    <form action="" id="survey-form">
+        <div class="form-control">
+            <label for="name" id="name-label">Name</label>
+
+            <!-- Input Type Text -->
+            <input type="text" id="name" placeholder="Enter your name" required />
+        </div>
+        <div class="form-control">
+            <label for="name" id="email-label">Email</label>
+
+            <!-- Input Type Text -->
+            <input type="email" id="email" placeholder="Enter an email" required />
+        </div>
+        <div class="form-control">
+            <label for="name" id="number-label">Age</label>
+
+            <!-- Input Type Text -->
+            <input type="number" id="number" name="quantity" min="1" max="100" placeholder="Enter Your age" required />
+        </div>
+        <div class="form-control">
+            <label for="cars">Choose a gender:</label>
+            <select id="dropdown" name="cars" required>
+                <option value="none">Select</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
+            </select>
+        </div>
+        <div class="form-control">
+            <label>What do you like most?</label>
+            <!-- Input Type Radio Button -->
+            <label for="recommed-1">
+                <input type="radio" id="recommed-1" name="recommed" value="tea">Tea</input>
+            </label>
+            <label for="recommed-2">
+                <input type="radio" id="recommed-2" name="recommed" value="coffee">Coffee</input>
+            </label>
+            <label for="recommed-3">
+                <input type="radio" id="recommed-3" name="recommed" value="soda">Soda</input>
+            </label>
+        </div>
+        <div class="form-control">
+            <label>Your Skills?
+                <small>(Check all that apply)</small>
+            </label>
+            <!-- Input Type Checkbox -->
+            <label for="inp-1">
+                <input type="checkbox" name="inp" value="flirt">Flirting</input>
+            </label>
+            <label for="inp-1">
+                <input type="checkbox" name="inp" value="excel">MS Excel Professional</input>
+            </label>
+            <label for="inp-1">
+                <input type="checkbox" name="inp" value="adobe">Adobe Photoshop</input>
+            </label>
+            <label for="inp-1">
+                <input type="checkbox" name="inp" value="html">Html</input>
+            </label>
+            <label for="inp-1">
+                <input type="checkbox" name="inp" value="sad">Being Sad</input>
+            </label>
+        </div>
+        <div class="form-control">
+            <label for="comment">
+                Describe Yourself
+            </label>
+
+            <!-- multi-line text input control -->
+            <textarea name="comment" id="comment" placeholder="Enter your comment here">
+            </textarea>
+        </div>
+        <button type="submit" value="submit" id="submit">
+            Submit
+        </button>
+    </form>
+</body>
+
+</html>
